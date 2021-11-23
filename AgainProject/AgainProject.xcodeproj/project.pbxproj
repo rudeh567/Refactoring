@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2672358A154A405ADB862B90 /* Pods_AgainProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2231D1E71E2BE16249268B5E /* Pods_AgainProject.framework */; };
+		F0819364274C675600E97E24 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0819363274C675600E97E24 /* TabBarViewController.swift */; };
+		F081936A274C79EB00E97E24 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0819369274C79EB00E97E24 /* ProfileViewController.swift */; };
+		F0819371274CA9F200E97E24 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0819370274CA9F200E97E24 /* ProfileView.xib */; };
+		F0819373274CAA1F00E97E24 /* ProfileVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0819372274CAA1F00E97E24 /* ProfileVIew.swift */; };
+		F0819376274CBE0E00E97E24 /* UIViewAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0819375274CBE0E00E97E24 /* UIViewAnimate.swift */; };
 		F0CB64AB274B8D0100B2BB50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB64AA274B8D0100B2BB50 /* AppDelegate.swift */; };
 		F0CB64AD274B8D0100B2BB50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB64AC274B8D0100B2BB50 /* SceneDelegate.swift */; };
 		F0CB64AF274B8D0100B2BB50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB64AE274B8D0100B2BB50 /* ViewController.swift */; };
@@ -20,6 +25,11 @@
 		2231D1E71E2BE16249268B5E /* Pods_AgainProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgainProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AEF966238877D59C4DA8995 /* Pods-AgainProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgainProject.release.xcconfig"; path = "Target Support Files/Pods-AgainProject/Pods-AgainProject.release.xcconfig"; sourceTree = "<group>"; };
 		B88FA5E3EF83B106EA1ED2E7 /* Pods-AgainProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgainProject.debug.xcconfig"; path = "Target Support Files/Pods-AgainProject/Pods-AgainProject.debug.xcconfig"; sourceTree = "<group>"; };
+		F0819363274C675600E97E24 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F0819369274C79EB00E97E24 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F0819370274CA9F200E97E24 /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		F0819372274CAA1F00E97E24 /* ProfileVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVIew.swift; sourceTree = "<group>"; };
+		F0819375274CBE0E00E97E24 /* UIViewAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAnimate.swift; sourceTree = "<group>"; };
 		F0CB64A7274B8D0100B2BB50 /* AgainProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgainProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CB64AA274B8D0100B2BB50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0CB64AC274B8D0100B2BB50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,8 +66,84 @@
 				B88FA5E3EF83B106EA1ED2E7 /* Pods-AgainProject.debug.xcconfig */,
 				8AEF966238877D59C4DA8995 /* Pods-AgainProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F0819365274C67EF00E97E24 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F0819363274C675600E97E24 /* TabBarViewController.swift */,
+				F0CB64AE274B8D0100B2BB50 /* ViewController.swift */,
+				F0819369274C79EB00E97E24 /* ProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F0819366274C680000E97E24 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				F0CB64B0274B8D0100B2BB50 /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		F0819367274C681400E97E24 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F0CB64AA274B8D0100B2BB50 /* AppDelegate.swift */,
+				F0CB64AC274B8D0100B2BB50 /* SceneDelegate.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F0819368274C76EA00E97E24 /* BaseFile */ = {
+			isa = PBXGroup;
+			children = (
+				F0CB64B3274B8D0200B2BB50 /* Assets.xcassets */,
+				F0CB64B5274B8D0200B2BB50 /* LaunchScreen.storyboard */,
+			);
+			path = BaseFile;
+			sourceTree = "<group>";
+		};
+		F081936C274CA97E00E97E24 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F081936F274CA9A200E97E24 /* Model */,
+				F081936E274CA99F00E97E24 /* ViewModel */,
+				F081936D274CA99C00E97E24 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F081936D274CA99C00E97E24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0819370274CA9F200E97E24 /* ProfileView.xib */,
+				F0819372274CAA1F00E97E24 /* ProfileVIew.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F081936E274CA99F00E97E24 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F081936F274CA9A200E97E24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0819374274CBDE000E97E24 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F0819375274CBE0E00E97E24 /* UIViewAnimate.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		F0CB649E274B8D0100B2BB50 = {
@@ -81,13 +167,13 @@
 		F0CB64A9274B8D0100B2BB50 /* AgainProject */ = {
 			isa = PBXGroup;
 			children = (
-				F0CB64AA274B8D0100B2BB50 /* AppDelegate.swift */,
-				F0CB64AC274B8D0100B2BB50 /* SceneDelegate.swift */,
-				F0CB64AE274B8D0100B2BB50 /* ViewController.swift */,
-				F0CB64B0274B8D0100B2BB50 /* Main.storyboard */,
-				F0CB64B3274B8D0200B2BB50 /* Assets.xcassets */,
-				F0CB64B5274B8D0200B2BB50 /* LaunchScreen.storyboard */,
+				F0819374274CBDE000E97E24 /* Extension */,
 				F0CB64B8274B8D0200B2BB50 /* Info.plist */,
+				F0819368274C76EA00E97E24 /* BaseFile */,
+				F0819367274C681400E97E24 /* Base */,
+				F0819366274C680000E97E24 /* StoryBoard */,
+				F081936C274CA97E00E97E24 /* Profile */,
+				F0819365274C67EF00E97E24 /* ViewController */,
 			);
 			path = AgainProject;
 			sourceTree = "<group>";
@@ -152,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0819371274CA9F200E97E24 /* ProfileView.xib in Resources */,
 				F0CB64B7274B8D0200B2BB50 /* LaunchScreen.storyboard in Resources */,
 				F0CB64B4274B8D0200B2BB50 /* Assets.xcassets in Resources */,
 				F0CB64B2274B8D0100B2BB50 /* Main.storyboard in Resources */,
@@ -207,7 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0819364274C675600E97E24 /* TabBarViewController.swift in Sources */,
 				F0CB64AF274B8D0100B2BB50 /* ViewController.swift in Sources */,
+				F0819376274CBE0E00E97E24 /* UIViewAnimate.swift in Sources */,
+				F0819373274CAA1F00E97E24 /* ProfileVIew.swift in Sources */,
+				F081936A274C79EB00E97E24 /* ProfileViewController.swift in Sources */,
 				F0CB64AB274B8D0100B2BB50 /* AppDelegate.swift in Sources */,
 				F0CB64AD274B8D0100B2BB50 /* SceneDelegate.swift in Sources */,
 			);
