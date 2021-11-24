@@ -25,15 +25,16 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     //스토리보드를 인스턴스화 하여 탭의 구성요소에 집어넣었습니다.
     func tabBarSetting() {
         guard let mainView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainView") as? ViewController else { return }
-        let mainBarItem = UITabBarItem(title: "MainView", image: nil, selectedImage: nil)
-        
+        let mainBarItem = UITabBarItem(title: "MainView", image: UIImage(named: "user"), selectedImage: nil)
+       
         mainView.tabBarItem = mainBarItem
         
         guard let profileView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Profile") as? ProfileViewController else { return }
-        let profileBarItem = UITabBarItem(title: "Profile", image: nil, selectedImage: nil)
+        let profileBarItem = UITabBarItem(title: "Login", image: UIImage(named: "login"), selectedImage: nil)
         
         profileView.tabBarItem = profileBarItem
         
+        self.tabBar.tintColor = UIColor(named: "periwinkleTwo")
         self.viewControllers = [mainView, profileView]
     }
     
@@ -43,5 +44,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         print("선택된 탭: \(viewController.title ?? "유효하지 않은 페이지")")
     }
+    
+    
 }
 
