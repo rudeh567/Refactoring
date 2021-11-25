@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="20200106511952" translatesAutoresizingMaskIntoConstraints="NO" id="v93-QX-VLG">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="20200106511952" translatesAutoresizingMaskIntoConstraints="NO" id="v93-QX-VLG">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                     </imageView>
                 </subviews>
@@ -28,7 +28,7 @@
                 <constraint firstItem="v93-QX-VLG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nfd-EO-rgB"/>
             </constraints>
             <connections>
-                <outlet property="cellImageVIew" destination="v93-QX-VLG" id="8wE-EO-Njc"/>
+                <outlet property="cellImageView" destination="v93-QX-VLG" id="8wE-EO-Njc"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </collectionViewCell>

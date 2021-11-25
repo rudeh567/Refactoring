@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class ProfileView: UIView {
     
@@ -15,6 +16,7 @@ class ProfileView: UIView {
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likeView: UIView!
     @IBOutlet weak var genderView: UIView!
+    @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var locationView: UIView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var costsView: UIView!
@@ -22,13 +24,18 @@ class ProfileView: UIView {
     @IBOutlet weak var totalPhotoButton: UIButton!
     @IBOutlet weak var dimmedView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var costsLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    let viewModel = ProfileViewModel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadView()
         viewSetting()
         dimissSetting()
-        collectionViewSetting()
+        viewModel.getProfileInfo(completion: dataReceive)
     }
     
     required init?(coder: NSCoder) {
@@ -36,7 +43,15 @@ class ProfileView: UIView {
         loadView()
         viewSetting()
         dimissSetting()
-        collectionViewSetting()
+        viewModel.getProfileInfo(completion: dataReceive)
+    }
+    
+    @IBAction func showTotal(_ sender: Any) {
+        let view = TotalView()
+        view.frame = UIScreen.main.bounds
+        view.viewModel.photo = self.viewModel.photo
+        view.showAni(y: self.safeAreaInsets.bottom)
+        self.addSubview(view)
     }
     
     private func loadView() {
@@ -62,6 +77,8 @@ class ProfileView: UIView {
         dimmedView.addGestureRecognizer(dimmedTap)
         dimmedView.isUserInteractionEnabled = true
     }
+    
+    
     
     @objc func dismissProfile(_ tapRecognizer: UITapGestureRecognizer) {
         self.dimissAni()
@@ -109,8 +126,26 @@ class ProfileView: UIView {
         // label의 text로 NSMutableAttributedString 인스턴스를 만듭니다.
         let attributedString = NSMutableAttributedString(string: text)
         // NSMutableAttributedString에 속성을 추가합니다.
-        attributedString.addAttribute(.foregroundColor, value: UIColor.red, range: (text as NSString).range(of: "2"))
+        attributedString.addAttribute(.foregroundColor, value: UIColor.black, range: (text as NSString).range(of: "총"))
+        attributedString.addAttribute(.foregroundColor, value: UIColor.black, range: (text as NSString).range(of: "개"))
         // label에 방금 만든 속성을 적용합니다.
         self.photoCountLabel.attributedText = attributedString
+    }
+    
+    func dataReceive(check: Bool) {
+        if check {
+            photoCountLabel.text = "총 \(viewModel.photo?.photoList?.count ?? 0)개"
+            likeLabel.text = viewModel.member?.totLikeCnt
+            genderLabel.text = viewModel.member?.mem_age
+            nameLabel.text = viewModel.member?.chat_name
+            locationLabel.text = "|  \(viewModel.member?.loc ?? "광주")"
+            costsLabel.text = viewModel.member?.chat_conts
+            profileImage.kf.setImage(with: URL(string: viewModel.photo?.profile ?? viewModel.defaultImage))
+
+            collectionViewSetting()
+            collectionView.reloadData()
+        } else {
+            print("불러오지못했습니다.")
+        }
     }
 }

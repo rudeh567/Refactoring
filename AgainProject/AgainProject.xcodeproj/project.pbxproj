@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2672358A154A405ADB862B90 /* Pods_AgainProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2231D1E71E2BE16249268B5E /* Pods_AgainProject.framework */; };
+		F01413DA274F6A09007532CA /* TotalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01413D9274F6A09007532CA /* TotalView.xib */; };
+		F01413DC274F6A4E007532CA /* TotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01413DB274F6A4E007532CA /* TotalView.swift */; };
 		F072A81E274DC1E30035ABC1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F072A81D274DC1E30035ABC1 /* Colors.xcassets */; };
 		F072A821274E08BC0035ABC1 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F072A81F274E08BC0035ABC1 /* PhotoCollectionViewCell.swift */; };
 		F072A822274E08BC0035ABC1 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F072A820274E08BC0035ABC1 /* PhotoCollectionViewCell.xib */; };
@@ -31,6 +33,8 @@
 		2231D1E71E2BE16249268B5E /* Pods_AgainProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgainProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AEF966238877D59C4DA8995 /* Pods-AgainProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgainProject.release.xcconfig"; path = "Target Support Files/Pods-AgainProject/Pods-AgainProject.release.xcconfig"; sourceTree = "<group>"; };
 		B88FA5E3EF83B106EA1ED2E7 /* Pods-AgainProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgainProject.debug.xcconfig"; path = "Target Support Files/Pods-AgainProject/Pods-AgainProject.debug.xcconfig"; sourceTree = "<group>"; };
+		F01413D9274F6A09007532CA /* TotalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalView.xib; sourceTree = "<group>"; };
+		F01413DB274F6A4E007532CA /* TotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalView.swift; sourceTree = "<group>"; };
 		F072A81D274DC1E30035ABC1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F072A81F274E08BC0035ABC1 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		F072A820274E08BC0035ABC1 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 			children = (
 				F0819370274CA9F200E97E24 /* ProfileView.xib */,
 				F0819372274CAA1F00E97E24 /* ProfileVIew.swift */,
+				F01413D9274F6A09007532CA /* TotalView.xib */,
+				F01413DB274F6A4E007532CA /* TotalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 				F0CB64B7274B8D0200B2BB50 /* LaunchScreen.storyboard in Resources */,
 				F072A822274E08BC0035ABC1 /* PhotoCollectionViewCell.xib in Resources */,
 				F0CB64B4274B8D0200B2BB50 /* Assets.xcassets in Resources */,
+				F01413DA274F6A09007532CA /* TotalView.xib in Resources */,
 				F0CB64B2274B8D0100B2BB50 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +338,7 @@
 				F0819373274CAA1F00E97E24 /* ProfileVIew.swift in Sources */,
 				F072A829274E2C990035ABC1 /* ProfileViewModel.swift in Sources */,
 				F081936A274C79EB00E97E24 /* ProfileViewController.swift in Sources */,
+				F01413DC274F6A4E007532CA /* TotalView.swift in Sources */,
 				F0CB64AB274B8D0100B2BB50 /* AppDelegate.swift in Sources */,
 				F0CB64AD274B8D0100B2BB50 /* SceneDelegate.swift in Sources */,
 			);
