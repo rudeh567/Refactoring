@@ -29,6 +29,9 @@ class ProfileView: UIView {
     @IBOutlet weak var nameLabel: UILabel!
     
     let viewModel = ProfileViewModel()
+    var safeArea: CGFloat = 0
+    
+    var showTotal: (() -> ())?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,11 +50,7 @@ class ProfileView: UIView {
     }
     
     @IBAction func showTotal(_ sender: Any) {
-        let view = TotalView()
-        view.frame = UIScreen.main.bounds
-        view.viewModel.photo = self.viewModel.photo
-        view.showAni(y: self.safeAreaInsets.bottom)
-        self.addSubview(view)
+        showTotal!()
     }
     
     private func loadView() {
@@ -78,10 +77,8 @@ class ProfileView: UIView {
         dimmedView.isUserInteractionEnabled = true
     }
     
-    
-    
     @objc func dismissProfile(_ tapRecognizer: UITapGestureRecognizer) {
-        self.dimissAni()
+        self.dimissAni(y: 0)
     }
     
     func viewSetting() {

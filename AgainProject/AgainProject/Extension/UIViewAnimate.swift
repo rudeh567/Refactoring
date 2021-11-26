@@ -18,10 +18,10 @@ extension UIView {
         }
     }
     
-    func dimissAni(_ duration: TimeInterval = 0.5, delay: Double = 0) {
+    func dimissAni(_ duration: TimeInterval = 0.5, delay: Double = 0, y: CGFloat) {
         UIView.animate(withDuration: duration, delay: delay, options: .curveLinear) {
-            self.frame.origin.y = self.bounds.height
+            self.frame.origin.y = self.bounds.height + y
         }
-
+        
     }
 }

@@ -18,8 +18,18 @@ class ViewController: UIViewController {
     @IBAction func openProfile(_ sender: Any) {
         let view = ProfileView()
         view.frame = UIScreen.main.bounds
-        view.showAni(y: self.view.safeAreaInsets.bottom)
+        view.safeArea = (self.tabBarController?.tabBar.frame.height)!
+        view.showAni(y: view.safeArea)
         self.view.addSubview(view)
+        
+        view.showTotal = {
+            guard let totalVc = UIStoryboard  (name: "Album", bundle: nil).instantiateViewController(withIdentifier: "total") as? TotalViewController else { return }
+            
+            totalVc.viewModel.photo = view.viewModel.photo
+            
+            totalVc.modalPresentationStyle = .overFullScreen
+            self.present(totalVc, animated: true, completion: nil)
+        }
     }
     
     
